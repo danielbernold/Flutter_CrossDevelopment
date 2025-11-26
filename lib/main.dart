@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_starter/favorite_page.dart';
 import 'home_page.dart';
 import 'search_page.dart';
 import 'cart_page.dart';
@@ -15,9 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Tabs Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: const MainTabs(),
     );
   }
@@ -33,12 +32,7 @@ class MainTabs extends StatefulWidget {
 class _MainTabsState extends State<MainTabs> {
   int currentIndex = 0;
 
-  final pages = const [
-    HomePage(),
-    SearchPage(),
-    CartPage(),
-    ProfilePage(),
-  ];
+  final pages = const [HomePage(), SearchPage(), CartPage(), ProfilePage(), FavoritePage()];
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +62,11 @@ class _MainTabsState extends State<MainTabs> {
             icon: Icon(Icons.person_outline),
             activeIcon: Icon(Icons.person),
             label: "Profile",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_outline),
+            activeIcon: Icon(Icons.favorite),
+            label: "Favorite",
           ),
         ],
       ),
