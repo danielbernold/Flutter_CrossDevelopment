@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_starter/favorite_page.dart';
 import 'home_page.dart';
-import 'search_page.dart';
+import 'api_page.dart';
 import 'cart_page.dart';
 import 'profile_page.dart';
 
@@ -32,7 +32,7 @@ class MainTabs extends StatefulWidget {
 class _MainTabsState extends State<MainTabs> {
   int currentIndex = 0;
 
-  final pages = const [HomePage(), SearchPage(), CartPage(), ProfilePage(), FavoritePage()];
+  final pages = [HomePage(), ApiPage(), CartPage(), ProfilePage(), FavoritePage()];
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class _MainTabsState extends State<MainTabs> {
           BottomNavigationBarItem(
             icon: Icon(Icons.search_outlined),
             activeIcon: Icon(Icons.search),
-            label: "Search",
+            label: "API",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart_outlined),
