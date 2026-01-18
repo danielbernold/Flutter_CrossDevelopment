@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_starter/favorite_page.dart';
+import 'package:flutter_application_starter/network_page.dart';
 import 'home_page.dart';
 import 'api_page.dart';
 import 'cart_page.dart';
@@ -32,7 +33,7 @@ class MainTabs extends StatefulWidget {
 class _MainTabsState extends State<MainTabs> {
   int currentIndex = 0;
 
-  final pages = [HomePage(), ApiPage(), CartPage(), ProfilePage(), FavoritePage()];
+  final pages = [HomePage(), ApiPage(), CartPage(), NetworkPage(), FavoritePage()];
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +60,9 @@ class _MainTabsState extends State<MainTabs> {
             label: "Cart",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            activeIcon: Icon(Icons.person),
-            label: "Profile",
+            icon: Icon(Icons.wifi_off),
+            activeIcon: Icon(Icons.wifi),
+            label: "Network",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_outline),
